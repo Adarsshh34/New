@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
-
+import { AiFillCaretDown } from "react-icons/ai";
 function Navbar() {
 	const navRef = useRef();
 
@@ -13,12 +13,33 @@ function Navbar() {
 
 	return (
 		<header>
-			<h3>LOGO</h3>
+			<div style={{ backgroundColor:  "var(--mainColor)" }} > <img src="https://parikhinfosolutions.com/wp-content/uploads/2023/01/logo-desktop.webp" alt="Logo" width="40" height="45" class="d-inline-block align-text-top" />
+			<div style={{ backgroundColor: "var(--mainColor)", color: "white", display:"flex" ,flexDirection:"column"}} >
+				<div>Parikh info Solution Pvt. Ltd. </div>
+				<div style={{ fontSize: "0.8rem" }}>Localization & Globalization Experts</div>
+			</div>
+			</div>
 			<nav ref={navRef}>
-				<a href="/#">Home</a>
-				<a href="/#">My work</a>
-				<a href="/#">Blog</a>
-				<a href="/#">About me</a>
+				<div class="dropdown">
+					<button class="dropbtn">Services</button>
+					<div class="dropdown-content">
+						<a href="#">Translation</a>
+						<a href="#">Transcription</a>
+						<a href="#">Localization</a>
+						<a href="#">Dubbing</a>
+						<a href="#">Subtitling</a>
+						<a href="#">Voice Over</a>
+						<a href="#">Interpretation (VRI)</a>
+						<a href="#">Content Writing</a>
+						<a href="#">Video Creation</a>
+						<a href="#">AI Dubbing</a>
+					</div>
+				</div>
+				<a href="/#">About Us</a>
+				<a href="/#">Clients</a>
+				<a href="/#">Blogs</a>
+				<a href="/#">Join Now</a>
+				<a href="/#">Contact</a>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
